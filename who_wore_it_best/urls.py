@@ -17,7 +17,9 @@ Including another URLconf
 from django.urls import path
 from who_wore_it_best import views
 
+app_name = "who_wore_it_best"
+
 urlpatterns = [
-    path('/vote', views.vote),
-    path('/getvotes', views.getvotes),
+    path('/vote', views.vote, name='vote'),
+    path('/getvotes', views.getvotes, name='getvotes'),
 ]
