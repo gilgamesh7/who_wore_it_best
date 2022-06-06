@@ -22,4 +22,5 @@ app_name = "who_wore_it_best"
 urlpatterns = [
     path('/vote', views.vote, name='vote'),
     path('/getvotes', views.getvotes, name='getvotes'),
+    path('', views.updatevotes, name='updatevotes'),
 ]
