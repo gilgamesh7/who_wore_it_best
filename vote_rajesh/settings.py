@@ -56,7 +56,10 @@ ROOT_URLCONF = 'vote_rajesh.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'who_wore_it_best','templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'who_wore_it_best','templates'),
+            os.path.join(BASE_DIR, 'who_wore_it_best','static'),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

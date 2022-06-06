@@ -3,10 +3,40 @@
 {% load static %}
 
 {% block content %}
-  <div class="card">
-    <div class="card-body">
-      In God we Trust & Get Votes
-    </div>
-  </div>
+<div class="p-3 mb-2 bg-success text-white"><h1> Election Results </h1></div> 
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Galdiator</th>
+          <th scope="col">Total Votes</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">    
+        <tr>
+            <td> Rajesh </td><td>{{ election_result.rajesh_votes }}</td>
+        </tr>
+        <tr>
+            <td> Naresh </td><td>{{ election_result.naresh_votes }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="p-3 mb-2 bg-success text-white"><h1> How you voted </h1></div>
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Person</th>
+          <th scope="col">Vote</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">    
+        {% for people_and_vote in people_and_votes %}
+        <tr>
+            <td>{{ people_and_vote.name }}</td><td>{{ people_and_vote.vote }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
     
 {% endblock %}

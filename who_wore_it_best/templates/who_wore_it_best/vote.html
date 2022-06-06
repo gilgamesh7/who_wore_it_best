@@ -3,10 +3,23 @@
 {% load static %}
 
 {% block content %}
-  <div class="card">
-    <div class="card-body">
-      In God we Trust & Vote
+    <h1 class="text-center">Vote for Who you think wore it best ! </h1>
+    <div class="d-flex justify-content-center">
+        <div class="card-group">
+        <div class="card text-bg-warning mb-3 text-center" style="max-width: 20rem;">
+            <img src="{% static 'who_wore_it_best/images/Rajesh_Yellow.jpg' %}" class="card-img-top" style="height: 26vw;" alt="...">
+            <div class="card-body">
+                <button type="button" class="btn btn-success">Vote Rajesh</button>
+            </div>
+        </div>
+
+        <div class="card text-bg-warning mb-3 text-center" style="max-width: 20rem;">
+            <img src="{% static 'who_wore_it_best/images/Naresh_Yellow.jpg' %}" class="card-img-top" style="height: 26vw;" alt="...">
+            <div class="card-body">
+                <button type="button" class="btn btn-danger">Vote Naresh</button>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
     
 {% endblock %}
