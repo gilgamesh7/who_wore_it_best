@@ -4,3 +4,6 @@ from django.db import models
 class PeopleVote(models.Model):
     name = models.CharField(max_length=100)
     vote = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.name} | {self.vote}"
