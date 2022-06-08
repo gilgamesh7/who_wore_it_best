@@ -1,0 +1,49 @@
+{% extends 'who_wore_it_best/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <h1 class="text-center">Vote for Who you think wore it best ! </h1>
+
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary"> Post </button>
+        </form>
+    </div>
+    
+    <!-- <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Your Name</label>
+        <select class="form-select" name="person_submitting_vote" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          {% for person in people_list %}
+            <option value="{{person}}">{{person}}</option>
+          {% endfor %}
+        </select>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="card-group">
+        <div class="card text-bg-warning mb-3 text-center" style="max-width: 20rem;">
+            <img src="{% static 'who_wore_it_best/images/Rajesh_Yellow.jpg' %}" class="card-img-top" style="height: 26vw;" alt="...">
+            <div class="card-body">
+                <form method="POST">
+                <a href="{% url 'who_wore_it_best:updatevotes' %}" class="btn btn-success" method="post">Vote Rajesh</a>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="card text-bg-warning mb-3 text-center" style="max-width: 20rem;">
+            <img src="{% static 'who_wore_it_best/images/Naresh_Yellow.jpg' person_submitting_vote.value %}" class="card-img-top" style="height: 26vw;" alt="...">
+            <div class="card-body">
+                <button type="button" class="btn btn-danger">Vote Naresh</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+{% endblock %}
