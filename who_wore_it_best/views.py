@@ -1,14 +1,18 @@
-from django.views.generic import FormView
+from django.views.generic import CreateView
 
 from who_wore_it_best.models import PeopleVote
 from who_wore_it_best.forms import VoteForm
 
 # Create your views here.
-class VoteView(FormView):
+class VoteView(CreateView):
     model = PeopleVote
     form_class = VoteForm
     template_name = 'who_wore_it_best/vote.html'
 
+class ThanksView(CreateView):
+    model = PeopleVote
+    form_class = VoteForm
+    template_name = 'who_wore_it_best/thank_you.html'
 
 # def vote(request):
 #     people = PeopleVote.objects.all().values('name')
