@@ -22,10 +22,12 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: show tk version
+      - name: Install TK dependency
         run: |
-          python -c "import tkinter;print(tkinter.TkVersion)"
-          
+          sudo apt-get update
+          sudo apt-get install python3-tk
+          apt install -y tk
+
       - name: Create and start virtual environment
         run: |
           python -m venv venv
