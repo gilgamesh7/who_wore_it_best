@@ -15,13 +15,16 @@ Including another URLconf
 """
 
 from django.urls import path
-from who_wore_it_best.views import VoteView, ThanksView
+
+from who_wore_it_best.views import VoteView, ThanksView, getvotes
 
 app_name = "who_wore_it_best"
 
 urlpatterns = [
     path('vote', VoteView.as_view(), name='vote'),
     path('thanks', ThanksView.as_view(), name='thanks'),
+    # path('getvotes', GetVotesView.as_view(), name='getvotes'),
+    path('getvotes', getvotes, name='getvotes')
 ]
 
 # urlpatterns = [

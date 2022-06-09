@@ -38,7 +38,3 @@ class VoteForm(forms.ModelForm):
             'name' : forms.Select(attrs={'class': 'form-control'}, choices=people),
             'vote' : forms.Select(attrs={'class': 'form-control'}, choices=votes),
         }
-        # widgets = {
-        #     'name' : forms.TextInput(attrs={'class': 'form-control'}),
-        #     'vote' : forms.Select(attrs={'class': 'form-control'}, choices=votes),
-        # }
