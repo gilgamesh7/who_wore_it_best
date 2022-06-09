@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: show tk version
+        run: |
+          python -c "import tkinter;print(tkinter.TkVersion)"
+          
       - name: Create and start virtual environment
         run: |
           python -m venv venv
