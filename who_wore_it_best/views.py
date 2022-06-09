@@ -32,17 +32,3 @@ def getvotes(request):
     election_result = {'rajesh_votes':rajesh_votes, 'naresh_votes':naresh_votes, 'top_gun':top_gun}
 
     return render(request, 'who_wore_it_best/getvotes.html', {'election_result': election_result, 'people_and_votes': people_and_votes})
-
-
-# class GetVotesView(ListView):
-#     model = PeopleVote
-#     template_name = 'who_wore_it_best/getvotes.html'
-
-# def vote(request):
-#     people = PeopleVote.objects.all().values('name')
-
-#     people_list = [person['name'] for person in people]
-    
-#     return render(request, 'who_wore_it_best/vote.html',{'people_list': people_list})
-
-

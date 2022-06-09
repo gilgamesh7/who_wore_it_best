@@ -1,3 +1,4 @@
+# This causes problems installing on Azure
 # from tkinter import Button
 from django import forms
 from who_wore_it_best.models import PeopleVote

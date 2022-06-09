@@ -23,12 +23,5 @@ app_name = "who_wore_it_best"
 urlpatterns = [
     path('vote', VoteView.as_view(), name='vote'),
     path('thanks', ThanksView.as_view(), name='thanks'),
-    # path('getvotes', GetVotesView.as_view(), name='getvotes'),
-    path('getvotes', getvotes, name='getvotes')
+    path('getvotes', getvotes, name='getvotes'),
 ]
-
-# urlpatterns = [
-#     path('/vote', views.vote, name='vote'),
-#     path('/getvotes', views.getvotes, name='getvotes'),
-#     path('', views.updatevotes, name='updatevotes'),
-# ]
