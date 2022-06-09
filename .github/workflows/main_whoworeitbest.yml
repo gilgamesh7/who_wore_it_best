@@ -20,13 +20,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
-          python-version: '3.9'
-
-      - name: Install TK dependency
-        run: |
-          sudo apt-get update
-          sudo apt-get install python3-tk
-          sudo apt install -y tk
+          python-version: '3.8'
 
       - name: Create and start virtual environment
         run: |
@@ -66,4 +60,4 @@ jobs:
         with:
           app-name: 'whoworeitbest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_62B10D6C78024FD2B15B11F44982FD20 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_043DF227BECA47DE918598206A254165 }}
