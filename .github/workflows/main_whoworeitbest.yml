@@ -26,7 +26,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install python3-tk
-          apt install -y tk
+          sudo apt install -y tk
 
       - name: Create and start virtual environment
         run: |
