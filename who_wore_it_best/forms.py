@@ -21,6 +21,7 @@ people = [
     ('Mark Annas', 'Mark Annas'),
     ('Felix Lee', 'Felix Lee'),
     ('Bernard OLeary', 'Bernard OLeary'),
+    ('Ben Townend', 'Ben Townend'),
 ]
 
 votes = [
